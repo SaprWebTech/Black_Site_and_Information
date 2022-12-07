@@ -1,0 +1,307 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: Gilroy-ExtraBold;
+	src: url("../fonts/Gilroy-ExtraBold.ttf");
+}
+
+@font-face {
+	font-family: Chalet;
+	src: url("../fonts/ChaletE-LondonSixty.otf");
+}
+
+@font-face {
+	font-family: SlimFont;
+	src: url("../fonts/DINPro-CondensedMedium.ttf");
+}
+
+a{ /*для всех ссылок*/
+	text-decoration: none; /*декорирование текста (в данном случае - подчёркивание) - отключить*/
+	color: inherit; /*цвет текста ссылки - наследуемый*/
+}
+
+li{ /*для всех списков*/
+	list-style: none; /*стили списка отключить*/
+}
+
+.header{
+	height: 100px; /*высота блока - 100 пикселей*/
+	background-color: rgb(0, 0, 0, 0.7); /*цвет заднего фона (3 параметра rgb - это цвет, четвертый параметр - прозрачность*/
+}
+
+h1, h2, h3, h4, h5, h6{ /*для всех заголовков*/
+	font-weight: inherit; /*жирность шрифта - наследуемая*/
+}
+
+.head-1200{
+	margin: auto; /*отцентрирован по внешним отступам*/
+	max-width: 1200px; /*максимальная ширина - 1200 пикселей*/
+	height: 100%;
+	display: flex; /*задаёт расположение дочерним элементам блока по правилам flex. По умолчанию данное свойство выравнивает дочерние элементы по горизонтальной оси, делая это благодаря свойству flex-direction: row, которое даётся блоку вместе с объявлением flex, если не задано другое значение*/
+	align-items: center; /*выравнивание для flex дочерних блоков по побочной оси (в данном случае - центрирование)*/
+	justify-content: space-between; /*выравнивание дочерних блоков по главной оси - в данном случае расстояние между блоками будет равным, крайние блоки будут прибиты к краям родителя*/
+	padding: 0 10px; /*внутренний отступ (в данном случае сверху и снизу 0, справа и слева по 10 пикселей)*/
+}
+
+.logo{
+	height: 70%;
+}
+
+.test-rectangle{
+	height: 40px;
+	width: 100px;
+	background-color: #e77a7a;
+	border: black 3px solid; /*задаёт блоку контур (в данном случае контур чёрный, шириной 3 пикселя, сплошной)*/
+}
+
+.tel-big{
+	transition: 0.3s;
+	font-family: SlimFont;
+	font-size: 30px;
+}
+
+.tel-big:hover{
+	opacity: 0.5;
+}
+
+.phones{
+	display: flex;
+	flex-direction: column;
+	color: white;
+	align-items: end;
+}
+
+.menu-list{
+	display: flex;
+	font-size: 30px;
+	color: white;
+	font-family: SlimFont;
+	width: 300px;
+	justify-content: space-between;
+}
+
+.right-header{
+	display: flex;
+	align-items: center;
+	width: 550px;
+	justify-content: space-between;
+}
+
+.main-background{
+	background-image: url("../images/background.jpg");
+	height: 100vh;
+	background-size: cover;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.main-title{
+	font-family: Chalet;
+	font-size: 80px;
+	margin-bottom: 20px;
+}
+
+.main-screen{
+	max-width: 1200px;
+	padding: 0 10px;
+	margin: 0 auto 100px auto;
+}
+
+.header-link{
+	transition: 0.5s all;
+}
+
+.header-link:hover{
+	opacity: 0.5;
+}
+
+.main-text{
+	padding: 20px;
+	border: white 4px solid;
+	font-family: Chalet;
+	font-size: 28px;
+	max-width: 694px;
+}
+
+.uslugi:hover .menu-drop1 {display: flex; }
+
+.menu-drop1{
+	display: none;
+	position: absolute;
+	flex-direction: column;
+	background-color: rgb(0, 0, 0, 0.7);
+	padding: 0 30px 30px 30px;
+	margin-left: -30px;
+	margin-top: 32px;
+}
+
+.uslugi,
+.price,
+.contacts{
+	padding: 32px 0;
+}
+
+.second-header{
+	height: 20px;
+	background-color: #cf7676;
+}
+
+.menu-item{
+	transition: 0.3s all;
+	padding: 10px 0;
+}
+
+.menu-item:hover{
+	cursor: pointer;
+	background-color: #41396b;
+}
+
+.buttons-blue{
+	transition: 0.3s all;
+	background: linear-gradient(92.15deg, #527cee 43.29%, #c72aee 110.87%);
+	padding: 5px 90px;
+	font-size: 50px;
+	border: none;
+	border-radius: 10px;
+	margin: 20px 0;
+	font-family: SlimFont;
+	color: white;
+}
+
+.buttons-blue:hover{
+	cursor: pointer;
+	background-color: #ffffff;
+	color: #ffffff;
+}
+
+/******************************************************************************/
+/***********************************СЕКЦИЯ 1***********************************/
+/******************************************************************************/
+
+.section-1,
+.section-2,
+.section-3,
+.section-4{
+	font-family: ChaletE;
+	color: white;
+	background-color: black;
+}
+
+.section-1200{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	padding: 50px 10px;
+	margin: auto;
+}
+
+.card{
+	width: 32%;
+	height: auto;
+	border-bottom: 4px white solid;
+}
+
+.card-img{
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+
+.card-text{
+	margin-top: 20px;
+	font-size: 20px;
+	padding: 20px 0;
+	border-top: 4px white solid;
+}
+
+/******************************************************************************/
+/***********************************СЕКЦИЯ 2***********************************/
+/******************************************************************************/
+
+.left-block{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 66%;
+	min-height: 600px;
+	max-height: 800px;
+	background-image: url("../images/background.jpg");
+	background-size: cover;
+}
+
+.right-block{
+	width: 32%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.left-block-text{
+	padding: 20px;
+	background-color: rgb(0, 0, 0, 0.7);
+}
+
+.left-block-text h1,
+.right-block h1{
+	font-size: 48px;
+}
+
+.left-block-text p,
+.right-block p{
+	margin: 20px 0;
+	font-size: 18px;
+}
+
+.section-name{
+	padding-top: 50px;
+	font-size: 60px;
+	text-align: center;
+}
+
+/******************************************************************************/
+/***********************************СЕКЦИЯ 3***********************************/
+/******************************************************************************/
+
+.position-image{
+	height: 800px;
+	width: 500px;
+	background-image: url("../images/red.png");
+	background-size: cover;
+	padding: 20px;
+	position: relative;
+	z-index: 10;
+}
+
+.position-image h1{
+	font-size: 46px;
+	margin: 20px 0;
+}
+
+.position-image p{
+	font-size: 20px;
+}
+
+.rectangle{
+	position: absolute;
+	height: 800px;
+	width: 500px;
+	border: 4px white solid;
+	margin-top: 50px;
+	margin-left: 50px;
+	z-index: 5;
+}
+
+.sunset-image{
+	max-width: 1200px;
+	height: 80vh;
+	margin: 40px auto;
+	padding: 20px;
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+}
